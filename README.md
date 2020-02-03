@@ -56,7 +56,7 @@ const app = express();
 const certificate = fs.readFileSync('../certificates/ssl/cert1.crt', 'utf8');
 const privateKey = fs.readFileSync('../certificates/ssl/privkey.key', 'utf8');
 const credentials = { key: privateKey, cert: certificate };
-const httpsServer = https.createServer(credentials, App);
+const httpsServer = https.createServer(credentials, app);
 
 httpsServer.listen(443);
 ```
